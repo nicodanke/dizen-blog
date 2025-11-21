@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "posts": "Posteos",
+        "featured": "Destacados",
+        "about": "Sobre Nosotros"
+    },
+    "home": {
+        "title": "Explorá y viví nuevas experiencias",
+        "description": "Sumergite en relatos de viaje, lugares ocultos y experiencias que te invitan a descubrir el mundo sin mapa. Inspirate, elegí tu próximo destino y viví cada aventura guiado desde tu celular.",
+        "viewPosts": "Ver posts",
+        "featuredArticles": "Artículos Destacados"
+    },
+    "language": {
+        "select": "Seleccionar Idioma",
+        "en": "English",
+        "es": "Español",
+        "de": "Deutsch",
+        "it": "Italiano",
+        "fr": "Français"
+    },
+    "posts": {
+        "title": "Posteos",
+        "featured": "Posteos Destacados",
+        "readMore": "Leer Más",
+        "clearFilter": "Limpiar Filtro",
+        "noPostsFound": "No se encontraron posts para la categoría seleccionada.",
+        "noFeaturedPosts": "No hay posteos destacados disponibles."
+    }
+}

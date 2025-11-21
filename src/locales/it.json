@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "posts": "Articoli",
+        "featured": "In evidenza",
+        "about": "Chi sottoscritti"
+    },
+    "home": {
+        "title": "Esplora e vivi nuove esperienze",
+        "description": "Esplora storie di viaggio, luoghi nascosti e esperienze che ti invitano a scoprire il mondo senza carta. Inspirolli, scegli il tuo prossimo destinazione e vive ogni avventura guidata dal tuo cellulare.",
+        "viewPosts": "Vedi i post",
+        "featuredArticles": "Articoli in evidenza"
+    },
+    "language": {
+        "select": "Seleziona Lingua",
+        "en": "English",
+        "es": "Español",
+        "de": "Deutsch",
+        "it": "Italiano",
+        "fr": "Français"
+    },
+    "posts": {
+        "title": "Articoli",
+        "featured": "Articoli in Evidenza",
+        "readMore": "Leggi di Più",
+        "clearFilter": "Cancella Filtro",
+        "noPostsFound": "Nessun articolo trovato per la categoria selezionata.",
+        "noFeaturedPosts": "Nessun articolo in evidenza disponibile."
+    }
+}

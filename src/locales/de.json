@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "posts": "Beiträge",
+        "featured": "Ausgewählt",
+        "about": "Über Uns"
+    },
+    "home": {
+        "title": "Entdecke und erlebe neue Erfahrungen",
+        "description": "Sumergite en relatos de viaje, lugares ocultos y experiencias que te invitan a descubrir el mundo sin mapa. Inspirate, elegí tu próximo destino y viví cada aventura guiado desde tu celular.",
+        "viewPosts": "Beiträge ansehen",
+        "featuredArticles": "Ausgewählte Artikel"
+    },
+    "language": {
+        "select": "Sprache auswählen",
+        "en": "English",
+        "es": "Español",
+        "de": "Deutsch",
+        "it": "Italiano",
+        "fr": "Français"
+    },
+    "posts": {
+        "title": "Beiträge",
+        "featured": "Ausgewählte Beiträge",
+        "readMore": "Weiterlesen",
+        "clearFilter": "Filter löschen",
+        "noPostsFound": "Keine Beiträge für die ausgewählte Kategorie gefunden.",
+        "noFeaturedPosts": "Keine ausgewählten Beiträge verfügbar."
+    }
+}

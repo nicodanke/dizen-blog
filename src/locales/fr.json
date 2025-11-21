@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "posts": "Articles",
+        "featured": "À la une",
+        "about": "À propos de nous"
+    },
+    "home": {
+        "title": "Explorez et viviez nouvelles expériences",
+        "description": "Explorez des histoires de voyage, des endroits cachés et des expériences qui vous invitent à découvrir le monde sans carte. Inspirez-vous, choisissez votre prochaine destination et vivez chaque aventure guidée depuis votre téléphone.",
+        "viewPosts": "Voir les articles",
+        "featuredArticles": "Articles en vedette"
+    },
+    "language": {
+        "select": "Sélectionner la langue",
+        "en": "English",
+        "es": "Español",
+        "de": "Deutsch",
+        "it": "Italiano",
+        "fr": "Français"
+    },
+    "posts": {
+        "title": "Articles",
+        "featured": "Articles en Vedette",
+        "readMore": "Lire la Suite",
+        "clearFilter": "Effacer le Filtre",
+        "noPostsFound": "Aucun article trouvé pour la catégorie sélectionnée.",
+        "noFeaturedPosts": "Aucun article en vedette disponible."
+    }
+}

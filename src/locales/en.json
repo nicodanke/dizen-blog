@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "posts": "Posts",
+        "featured": "Featured",
+        "about": "About Us"
+    },
+    "home": {
+        "title": "Explore and experience new adventures",
+        "description": "Explore stories of travel, hidden places and experiences that invite you to discover the world without a map. Inspire yourself, choose your next destination and live each adventure guided from your phone.",
+        "viewPosts": "View posts",
+        "featuredArticles": "Featured Articles"
+    },
+    "language": {
+        "select": "Select Language",
+        "en": "English",
+        "es": "Español",
+        "de": "Deutsch",
+        "it": "Italiano",
+        "fr": "Français"
+    },
+    "posts": {
+        "title": "Posts",
+        "featured": "Featured Posts",
+        "readMore": "Read More",
+        "clearFilter": "Clear Filter",
+        "noPostsFound": "No posts found for the selected category.",
+        "noFeaturedPosts": "No featured posts available."
+    }
+}
