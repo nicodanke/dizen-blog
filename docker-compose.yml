@@ -12,6 +12,14 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=dokploy-network"
+      # HTTP router - redirects to HTTPS
+      - "traefik.http.routers.dizen-blog-http.entrypoints=web"
+      - "traefik.http.routers.dizen-blog-http.rule=
+          Host(`dizen.pro`) && PathPrefix(`/blog`)"
+      - "traefik.http.routers.dizen-blog-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+      # HTTPS router
       - "traefik.http.routers.dizen-blog.entrypoints=websecure"
       - "traefik.http.routers.dizen-blog.tls=true"
       - "traefik.http.routers.dizen-blog.tls.certresolver=letsencrypt"
