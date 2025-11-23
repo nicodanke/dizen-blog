@@ -84,7 +84,7 @@ class BlogPost extends React.Component {
     loadPost = () => {
         const { i18n, match, location } = this.props;
 
-        // Get route from URL - remove leading slash
+        // Get route from URL - remove leading slash and /posts/ prefix
         let route = '';
         if (match?.url) {
             route = match.url.startsWith('/') ? match.url.substring(1) : match.url;
@@ -92,6 +92,11 @@ class BlogPost extends React.Component {
             route = location.pathname.startsWith('/') ? location.pathname.substring(1) : location.pathname;
         } else {
             route = window.location.pathname.startsWith('/') ? window.location.pathname.substring(1) : window.location.pathname;
+        }
+
+        // Remove /posts/ prefix if present (route will be like "posts/cool-blog-post")
+        if (route.startsWith('posts/')) {
+            route = route.substring(6); // Remove "posts/" prefix
         }
 
         // Get current language

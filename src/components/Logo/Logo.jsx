@@ -13,7 +13,7 @@ const Logo = (props) => {
     const logoImage = themeMode === 'light' ? blackLogoImage : whiteLogoImage;
 
     return (
-        <NavLogo href="/home">
+        <NavLogo href="/blog/">
             <DesktopLogo>
                 <img src={logoImage} alt="Logo" />
             </DesktopLogo>

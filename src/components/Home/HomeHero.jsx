@@ -28,13 +28,11 @@ const HomeHero = () => {
                     <p>{t('home.description')}</p>
                 </Container>
 
-                <a href="/posts">
-                    <Button
-                        route="/posts"
-                        text={t('home.viewPosts')}
-                        right
-                    />
-                </a>
+                <Button
+                    route="/posts"
+                    text={t('home.viewPosts')}
+                    right
+                />
             </BodyContainer>
         </HomeHeroContainer>
     )

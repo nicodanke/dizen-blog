@@ -15,10 +15,23 @@ import BasePostImage from '../../assets/img/base_post_image.png';
 const Project = (props) => {
     const { t } = useTranslation();
     const thumbnail = props.thumbnail || BasePostImage;
+    // Convert route to full path with /blog/posts prefix
+    let route = '/blog/posts';
+    if (props.route) {
+        if (props.route.startsWith('/blog')) {
+            route = props.route;
+        } else if (props.route.startsWith('/posts/')) {
+            route = `/blog${props.route}`;
+        } else if (props.route.startsWith('/')) {
+            route = `/blog/posts${props.route}`;
+        } else {
+            route = `/blog/posts/${props.route}`;
+        }
+    }
 
     return (
         <Fade direction="top" duration={1000} triggerOnce cascade>
-            <CaseLink href={props.route} target={props.newTab ? '_blank' : null}>
+            <CaseLink href={route} target={props.newTab ? '_blank' : null}>
                 <CaseStudyContainer>
                     <CaseStudyContent>
                         <Container flexRow leftAlign>

@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
+  "homepage": "/blog",
   "dependencies": {
     "framer-motion": "^1.7.0",
     "history": "^4.10.1",

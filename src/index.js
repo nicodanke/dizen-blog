@@ -31,21 +31,21 @@ class App extends Component {
             let trackingId = "123";
 
             ReactGA.initialize(trackingId);
-            ReactGA.pageview('/home');
+            ReactGA.pageview('/blog');
         }
 
 
         return (
             <ThemeContextProvider>
                 <GlobalStyle />
-                <BrowserRouter>
+                <BrowserRouter basename="/blog">
                     <AnimatePresence>
                         <Switch>
-                            <Route path="/home">
+                            <Route exact path="/">
                                 <HomePage />
                             </Route>
 
-                            <Route path="/posts">
+                            <Route exact path="/posts">
                                 <PostsPage />
                             </Route>
 
@@ -59,12 +59,12 @@ class App extends Component {
 
                             {Posts.map((post, index) => {
                                 return (
-                                    <Route key={index} path={`/${post.route}`}>
+                                    <Route key={index} path={`/posts/${post.route}`}>
                                         <BlogPost />
                                     </Route>
                                 )
                             })}
-                            <Redirect from="/" to="/home" />
+                            <Redirect from="/" to="/" />
                         </Switch>
                     </AnimatePresence>
                 </BrowserRouter>

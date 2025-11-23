@@ -1,26 +1,26 @@
 ## Setup
 
-### Option 1: Using Docker Compose (Recommended for Production)
+### Option 1: Local Development with Docker (Recommended)
 
-The easiest way to run this application is using Docker Compose:
+The easiest way to run this application locally is using Docker Compose:
 
 1. **Prerequisites**: Make sure you have [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
 
 2. **Build and run the application**:
    ```bash
-   docker-compose up --build
+   docker-compose -f docker-compose.dev.yml up --build
    ```
 
-3. **Access the application**: Open [http://localhost:3000](http://localhost:3000) in your browser.
+3. **Access the application**: Open [http://localhost:8087](http://localhost:8087) in your browser.
 
 4. **Stop the application**:
    ```bash
-   docker-compose down
+   docker-compose -f docker-compose.dev.yml down
    ```
 
 5. **Rebuild after changes**:
    ```bash
-   docker-compose up --build
+   docker-compose -f docker-compose.dev.yml up --build
    ```
 
 The Docker setup uses a multi-stage build that:
@@ -29,7 +29,26 @@ The Docker setup uses a multi-stage build that:
 - Handles React Router routing automatically
 - Includes optimized static asset caching
 
-### Option 2: Local Development
+### Option 2: Production Deployment
+
+For production deployment with Traefik reverse proxy:
+
+1. **Build and run the application**:
+   ```bash
+   docker-compose up --build
+   ```
+
+2. **Stop the application**:
+   ```bash
+   docker-compose down
+   ```
+
+The production setup includes:
+- Traefik integration for reverse proxy and SSL
+- Automatic path prefix stripping (`/blog`)
+- Production-optimized configuration
+
+### Option 3: Local Development
 
 Assuming that you have the necessary dependencies to start a React app:
 

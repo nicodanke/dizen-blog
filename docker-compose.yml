@@ -1,13 +1,27 @@
-version: '3.8'
-
 services:
   dizen-blog:
     build:
       context: .
       dockerfile: Dockerfile
+    networks:
+      - dokploy-network
     container_name: dizen-blog
-    ports:
-      - "3000:80"
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=dokploy-network"
+      - "traefik.http.routers.dizen-blog.entrypoints=websecure"
+      - "traefik.http.routers.dizen-blog.tls=true"
+      - "traefik.http.routers.dizen-blog.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.dizen-blog.rule=
+          Host(`testblog.dizen.pro`) && PathPrefix(`/blog`)"
+      - "traefik.http.routers.dizen-blog.middlewares=strip-blog-prefix"
+      - "traefik.http.middlewares.strip-blog-prefix.stripprefix.prefixes=/blog"
+      - "traefik.http.routers.dizen-blog.service=dizen-blog"
+      - "traefik.http.services.dizen-blog.loadbalancer.server.port=80"
+    
+networks:
+  dokploy-network:
+    external: true
