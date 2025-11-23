@@ -16,7 +16,7 @@ services:
       - "traefik.http.routers.dizen-blog.tls=true"
       - "traefik.http.routers.dizen-blog.tls.certresolver=letsencrypt"
       - "traefik.http.routers.dizen-blog.rule=
-          Host(`testblog.dizen.pro`) && PathPrefix(`/blog`)"
+          Host(`dizen.pro`) && PathPrefix(`/blog`)"
       - "traefik.http.routers.dizen-blog.middlewares=strip-blog-prefix"
       - "traefik.http.middlewares.strip-blog-prefix.stripprefix.prefixes=/blog"
       - "traefik.http.routers.dizen-blog.service=dizen-blog"
